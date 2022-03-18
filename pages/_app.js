@@ -1,7 +1,20 @@
+import React, { useEffect } from 'react';
+
 import '../styles/globals.css'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import Layout from '../sections/Layout';
+
+// workaround for "useLayoutEffect does nothing on the server" warning
+if (typeof document === 'undefined') {
+  React.useLayoutEffect = useEffect;
 }
 
-export default MyApp
+const App = ({ Component, pageProps }) => {
+  return (
+    <Layout {...pageProps}>
+      <Component {...pageProps} />
+    </Layout>
+  );
+};
+
+export default App;

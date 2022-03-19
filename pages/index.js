@@ -1,15 +1,40 @@
+import { useState } from 'react';
+
 import EcLogo from '../components/EcLogo';
-import styles from '../styles/Home.module.css'
+
+import AnimatedBackground from '../components/AnimatedBackground';
+
+import { useMountEffect } from '../hooks/toolkit';
+
+import docks from '../assets/ec_docks_2.jpg';
+
+const LOGO_SIZE = 150;
 
 const Home = () => {
+
+  const [sohwBg, setShohwBg] = useState(false);
+
+  useMountEffect(() => {
+    setTimeout(() => {
+      setShohwBg(true)
+    }, 500)
+  });
+
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-
-        <EcLogo width={800} height={500} color="#000" />
-
-      </main>
-    </div>
+    <>
+      <div className='relative w-screen h-screen wewe'>
+        <AnimatedBackground
+          toggle={sohwBg}
+          src={docks.src}
+          opacity={1}
+        />
+      </div>
+      <div className='absolute'>
+        <EcLogo
+          className="cursor-pointer"
+          width={LOGO_SIZE} height={LOGO_SIZE} color="#000" />
+      </div>
+    </>
   );
 };
 

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { animated, useSpring } from 'react-spring';
 
 const AnimatedBackground = ({
@@ -16,13 +17,16 @@ const AnimatedBackground = ({
 
   return (
     <animated.div
-      className="w-full h-full"
-      style={{
-        ...animatedStyle,
-        backgroundImage: `url(${src})`,
-        backgroundSize: 'contain'
-      }}
+      className="relative w-full h-full"
+      style={animatedStyle}
     >
+      <Image
+        src={src}
+        layout="fill"
+        objectFit="cover"
+        quality={80}
+        priority
+      />
       {children}
     </animated.div>
   );

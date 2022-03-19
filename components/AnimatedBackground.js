@@ -1,8 +1,11 @@
-import ImageEffect from 'react-image-effects';
-
 import { animated, useSpring } from 'react-spring';
 
-const AnimatedBackground = ({ src, toggle, opacity }) => {
+const AnimatedBackground = ({
+  children,
+  src,
+  toggle,
+  opacity
+}) => {
 
   const animatedStyle = useSpring({
     config: {
@@ -12,13 +15,15 @@ const AnimatedBackground = ({ src, toggle, opacity }) => {
   });
 
   return (
-    <animated.div className="animateddiv" style={animatedStyle}>
-      <ImageEffect
-        url={src}
-        effect="hallucination"
-        width="100vw"
-        height="100vh"
-      />
+    <animated.div
+      className="w-full h-full"
+      style={{
+        ...animatedStyle,
+        backgroundImage: `url(${src})`,
+        backgroundSize: 'contain'
+      }}
+    >
+      {children}
     </animated.div>
   );
 };

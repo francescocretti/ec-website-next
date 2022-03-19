@@ -4,7 +4,7 @@ import { useMountEffect } from '../hooks/toolkit';
 
 import AnimatedBackground from './AnimatedBackground';
 
-const Container = ({ children, bgImage }) => {
+const Container = ({ children, bgImage, bgOpacity }) => {
 
   const [start, setStart] = useState(false);
 
@@ -19,7 +19,7 @@ const Container = ({ children, bgImage }) => {
       <AnimatedBackground
         toggle={start}
         src={bgImage}
-        opacity={1}
+        opacity={bgOpacity || .8}
       >
         {children}
       </AnimatedBackground>

@@ -12,14 +12,20 @@ const LOGO_SIZE = 150;
 
 const Home = () => {
 
+  const [showLogo, setShowLogo] = useState(false);
+
+  useMountEffect(() => {
+    setShowLogo(true)
+  })
+
   return (
     <>
       <Container bgImage={image.src} />
 
       <div className='absolute'>
-        {<EcLogo
+        {showLogo && <EcLogo
           className="cursor-pointer"
-          width={LOGO_SIZE} height={LOGO_SIZE} color="#000"
+          width={LOGO_SIZE} height={LOGO_SIZE} color="#26161E"
         />}
       </div>
     </>

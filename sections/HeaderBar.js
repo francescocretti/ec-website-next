@@ -18,7 +18,7 @@ const DesktopHeader = () => {
           href="/music"
         />
         <HeaderMenuLink
-          text="SOUNTRACK"
+          text="SOUNDTRACK"
           href="/soundtrack"
         />
         <HeaderMenuLink

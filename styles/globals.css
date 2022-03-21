@@ -9,6 +9,10 @@
     margin: 0;
   }
 
+  .no-scroll-y {
+    overflow-y: hidden;
+  }
+
   a {
     text-decoration: none;
   }

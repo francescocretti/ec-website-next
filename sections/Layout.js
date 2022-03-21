@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Head from 'next/head';
+
+import { useRouter } from 'next/router';
 
 import HeaderBar from './HeaderBar';
 
@@ -12,7 +14,33 @@ import styles from '../styles/Layout.module.css';
 
 const Layout = ({ children, pageMeta }) => {
 
+  const router = useRouter();
+
   const [sideBarOpen, setSidebarOpen] = useState(false);
+
+  // close sidebar when loading a new page
+  useEffect(() => {
+    const closeSidebar = () => setSidebarOpen(false);
+    router.events.on('routeChangeComplete', closeSidebar);
+    router.events.on('routeChangeError', closeSidebar);
+    return () => {
+      router.events.off('routeChangeComplete', closeSidebar);
+      router.events.off('routeChangeError', closeSidebar);
+    }
+  }, [router.events]);
+
+  // manage scroll when sidebar is open
+  useEffect(() => {
+    if (sideBarOpen) {
+      // go to top
+      window.scrollTo({ top: 0 });
+      // disable scrolling
+      document.body.classList.add('no-scroll-y')
+    } else {
+      // enable scrolling
+      document.body.classList.remove('no-scroll-y')
+    }
+  }, [sideBarOpen]);
 
   const meta = {
     title: 'Electric Circus',

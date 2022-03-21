@@ -24,7 +24,7 @@ const AnimatedBackground = ({
         src={src}
         layout="fill"
         objectFit="cover"
-        quality={80}
+        quality={100}
         priority
       />
       {children}

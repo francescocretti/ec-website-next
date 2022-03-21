@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Head from 'next/head';
 
 import HeaderBar from './HeaderBar';
 
-import Footer from './Footer';
+import Backdrop from './Backdrop';
+
+import SideBar from './Sidebar';
 
 import styles from '../styles/Layout.module.css';
 
 const Layout = ({ children, pageMeta }) => {
+
+  const [sideBarOpen, setSidebarOpen] = useState(false);
 
   const meta = {
     title: 'Electric Circus',
@@ -27,11 +31,15 @@ const Layout = ({ children, pageMeta }) => {
         {/* Lato + Righteous from Google fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Righteous&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Inknut+Antiqua:wght@300&display=swap" rel="stylesheet" />
 
       </Head>
 
-      <HeaderBar />
+      <Backdrop sideBarOpen={sideBarOpen} setSidebarOpen={setSidebarOpen} />
+
+      <HeaderBar sideBarOpen={sideBarOpen} setSidebarOpen={setSidebarOpen} />
+
+      <SideBar open={sideBarOpen} setOpen={setSidebarOpen} />
 
       <div className={styles.container}>
         <main className={styles.main}>

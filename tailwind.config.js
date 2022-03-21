@@ -39,7 +39,7 @@ module.exports = {
       },
       fontFamily: {
         lato: ['Lato', 'serif'],
-        righteous: ['Righteous', 'sans-serif']
+        inknut: ['Inknut Antiqua', 'sans-serif']
       },
     }
   },

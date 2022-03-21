@@ -18,16 +18,16 @@ const Home = () => {
       <Container bgImage={image.src} >
         <div className='flex flex-col justify-center items-center w-full h-full'>
 
-          <h1 className='font-righteous text-3xl text-ec-grayred-500 text-center mb-10'>
-            Psychedelic grooves
-            <br />
-            from the world
-          </h1>
+
 
           <EcLogo
             className="cursor-pointer"
             width={LOGO_SIZE} height={LOGO_SIZE} color="#26161E"
           />
+
+          <h1 className='font-inknut font-bold text-3xl md:text-3xl text-ec-grayred-500 text-center mt-10'>
+            Psychedelic grooves from the world
+          </h1>
 
           <div className="mt-10">
             <SocialLinks />

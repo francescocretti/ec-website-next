@@ -11,7 +11,7 @@ import {
 
 const SocialLinks = () => {
   return (
-    <div className='flex justify-between text-4xl'>
+    <div className='flex justify-between text-3xl'>
       <Link href="https://spoti.fi/2zwMTOP" >
         <a
           className='inline-block mx-4 hover:opacity-50'

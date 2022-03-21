@@ -20,9 +20,12 @@ const Container = ({ children, bgImage, bgOpacity }) => {
         toggle={start}
         src={bgImage}
         opacity={bgOpacity || .8}
-      >
+      />
+
+      <div className='fixed w-screen h-screen container-content top-0 right-0 bottom-0 left-0'      >
         {children}
-      </AnimatedBackground>
+      </div>
+
     </div>
   );
 };

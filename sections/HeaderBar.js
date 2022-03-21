@@ -1,20 +1,30 @@
 import Link from 'next/link';
 
+import { useRouter } from 'next/router';
+
 import React from 'react';
 
-const HeaderMenuLink = ({ text, href, external }) => (
-  <li className='mb-4 text-right'>
-    <Link href={href}>
-      <a
-        className='tracking-[.5em]'
-        target={external ? "_blank" : "_self"}
-        rel={external ? "noopener noreferrer" : ""}
-      >
-        {text}
-      </a>
-    </Link>
-  </li>
-)
+const HeaderMenuLink = ({ text, href, external }) => {
+
+  const { pathname } = useRouter();
+
+  const linkStyle = pathname === href ?
+    'opacity-100 text-ec-grayred' :
+    'opacity-50 text-ec-grayred';
+
+  return (
+    <li className={`mb-4 text-right ${linkStyle} transition-opacity hover:opacity-100`}>
+      <Link href={href}>
+        <a
+          className="tracking-[.5em]"
+          target={external ? "_blank" : "_self"}
+          rel={external ? "noopener noreferrer" : ""}
+        >
+          {text}</a>
+      </Link>
+    </li>
+  )
+}
 
 const HeaderBar = () => {
   return (

@@ -8,7 +8,7 @@ const HeaderMenuLink = ({ text, href, external, color }) => {
 
   const linkColor = color === 'light' ? 'white' : 'text-ec-grayred';
 
-  const inactiveOpacity = color === 'light' ? 'opacity-80' : 'opacity-0';
+  const inactiveOpacity = color === 'light' ? 'opacity-80' : 'opacity-50';
 
   const linkStyle = pathname === href ?
     `opacity-100 ${linkColor}` :

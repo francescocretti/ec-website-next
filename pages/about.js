@@ -9,7 +9,7 @@ import image from '../assets/about-min.png';
 const About = () => {
   return (
     <>
-      <Container bgImage={image.src} />
+      <Container bgImage={image} />
     </>
   );
 };

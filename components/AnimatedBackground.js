@@ -4,6 +4,7 @@ import { animated, useSpring } from 'react-spring';
 const AnimatedBackground = ({
   children,
   src,
+  blurDataURL,
   toggle,
   opacity
 }) => {
@@ -22,9 +23,11 @@ const AnimatedBackground = ({
     >
       <Image
         src={src}
+        blurDataURL={blurDataURL}
         layout="fill"
         objectFit="cover"
-        quality={80}
+        quality={100}
+        placeholder="blur"
         priority
       />
       {children}

@@ -7,6 +7,7 @@ import { useMountEffect } from '../hooks/toolkit';
 import Container from '../components/Container';
 
 import image from '../assets/home-min.png';
+
 import SocialLinks from '../components/SocialLinks';
 
 const LOGO_SIZE = 150;
@@ -15,7 +16,7 @@ const Home = () => {
 
   return (
     <>
-      <Container bgImage={image.src} >
+      <Container bgImage={image} >
         <div className='flex flex-col justify-center items-center w-full h-full'>
 
           <h1 className='font-righteous text-3xl text-ec-grayred-500 text-center mb-10'>

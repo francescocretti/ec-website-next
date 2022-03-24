@@ -9,7 +9,7 @@ import image from '../assets/soundtrack-min.png';
 const Music = () => {
   return (
     <>
-      <Container bgImage={image.src} />
+      <Container bgImage={image} />
     </>
   );
 };

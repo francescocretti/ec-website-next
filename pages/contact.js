@@ -9,7 +9,7 @@ import image from '../assets/contact-min.png';
 const Contact = () => {
   return (
     <>
-      <Container bgImage={image.src} />
+      <Container bgImage={image} />
     </>
   );
 };

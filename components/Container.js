@@ -18,7 +18,8 @@ const Container = ({ children, bgImage, bgOpacity }) => {
     <div className='relative w-screen h-screen container-bg'>
       <AnimatedBackground
         toggle={start}
-        src={bgImage}
+        src={bgImage.src}
+        blurDataURL={bgImage.blurDataURL}
         opacity={bgOpacity || .8}
       />
 

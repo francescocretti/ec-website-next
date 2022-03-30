@@ -19,7 +19,7 @@ const Home = () => {
       <Container bgImage={image} >
         <div className='flex flex-col justify-center items-center w-full h-full'>
 
-          <a href="https://youtu.be/k7wUWpOObU0"          >
+          <a href="https://youtu.be/k7wUWpOObU0">
             <EcLogo
               className="cursor-pointer"
               width={LOGO_SIZE} height={LOGO_SIZE} color="#26161E"

@@ -36,7 +36,7 @@ const Music = () => {
 
         <div className='pb-20 xl:pb-0 xl:mr-20 xl:pr-20 xl:border-r border-ec-grayred-100'>
           <h4 className='text-ec-grayred text-xl font-medium mb-8 uppercase'>
-            Enough talking, let's play some tunes!
+            Enough talking, let&apos;s play some tunes!
           </h4>
           <SpotifyPlayer
             link="https://open.spotify.com/artist/1U6ZJR2dru7HSglnG1MPn6?si=sC0ybsxVQe64ojc0_6tpYw"

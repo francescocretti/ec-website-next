@@ -33,11 +33,11 @@ const SideBar = ({ open, setOpen }) => {
             href="/soundtrack"
             color="light"
           />
-          <HeaderMenuLink
+          {/* <HeaderMenuLink
             text="ABOUT"
             href="/about"
             color="light"
-          />
+          /> */}
           <HeaderMenuLink
             text="CONTACT"
             href="/contact"

@@ -21,10 +21,10 @@ const DesktopHeader = () => {
           text="SOUNDTRACK"
           href="/soundtrack"
         />
-        <HeaderMenuLink
+        {/* <HeaderMenuLink
           text="ABOUT"
           href="/about"
-        />
+        /> */}
         <HeaderMenuLink
           text="CONTACT"
           href="/contact"

@@ -59,7 +59,7 @@ const Layout = ({ children, pageMeta }) => {
 
       <Backdrop sideBarOpen={sideBarOpen} setSidebarOpen={setSidebarOpen} />
 
-      {/* <HeaderBar sideBarOpen={sideBarOpen} setSidebarOpen={setSidebarOpen} /> */}
+      <HeaderBar sideBarOpen={sideBarOpen} setSidebarOpen={setSidebarOpen} />
 
       <SideBar open={sideBarOpen} setOpen={setSidebarOpen} />
 

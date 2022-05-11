@@ -10,6 +10,8 @@ import Link from 'next/link';
 
 import tom from '../assets/tom.png';
 
+import frog from '../assets/frog.png';
+
 import NewVideo from '../components/NewVideo';
 
 const LOGO_SIZE = 150;
@@ -20,7 +22,7 @@ const Home = () => {
       <Container bgImage={image} >
         <div className='my-28 md:my-0 flex flex-col justify-center items-center w-full h-full'>
 
-          <Link href="https://youtu.be/k7wUWpOObU0">
+          <Link href="https://youtu.be/giqxm9PBFK8">
             <a>
               <EcLogo
                 className="cursor-pointer"
@@ -38,7 +40,11 @@ const Home = () => {
           </div>
 
           <div className="mt-24 md:mt-16">
-            <NewVideo videoUrl="https://youtu.be/k7wUWpOObU0" image={tom} />
+            <NewVideo
+              videoUrl="https://youtu.be/giqxm9PBFK8"
+              image={frog}
+              claim="CLICK THIS FROG!"
+            />
           </div>
 
         </div>

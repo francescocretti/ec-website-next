@@ -6,7 +6,7 @@ import AnimatedArrow from './AnimatedArrow';
 
 import Link from 'next/link';
 
-const NewVideo = ({ videoUrl, image }) => {
+const NewVideo = ({ videoUrl, image, claim }) => {
   return (
     <div className='relative flex flex-col justify-center text-center'>
 
@@ -38,7 +38,7 @@ const NewVideo = ({ videoUrl, image }) => {
         </Link>
 
       </div>
-      <p className='font-bold mt-4 text-xl'>CLICK THIS GUY!</p>
+      <p className='font-bold mt-4 text-xl'>{claim || 'CLICK HERE!'}</p>
     </div>
 
   )

@@ -22,7 +22,7 @@ const NewVideo = ({ videoUrl, image, claim }) => {
         <span className='inline-block font-bold text-black bg-gray-300 text-xl -rotate-[23deg]'>NEW VIDEO!</span>
       </div>
 
-      <div className='relative w-[150px] h-[250px] cursor-pointer transition-transform duration-700 hover:scale-110'>
+      <div className='relative w-[250px] h-[250px] cursor-pointer transition-transform duration-700 hover:scale-110'>
         <Link href={videoUrl}>
           <a>
             <Image

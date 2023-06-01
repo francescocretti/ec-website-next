@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import { FaSpotify, FaBandcamp } from "react-icons/fa";
 
 import Container from '../components/Container';
@@ -8,22 +6,8 @@ import image from '../assets/music-min.png';
 
 import SpotifyPlayer from '../components/SpotifyPlayer';
 
-const DiscoLink = ({ children, href, border }) => {
+import DiscoLink from '../components/DiscoLink';
 
-  const borderClass = border ? 'border-b' : '';
-
-  return (
-    <Link href={href} >
-      <a
-        className={`text-ec-grayred inline-flex items-center text-[40px] mb-10 pb-10 ${borderClass} border-ec-grayred-100 hover:opacity-50`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {children}
-      </a>
-    </Link>
-  )
-}
 const Music = () => {
   return (
     <Container

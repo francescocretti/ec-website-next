@@ -24,6 +24,11 @@ const SideBar = ({ open, setOpen }) => {
             color="light"
           />
           <HeaderMenuLink
+            text="SAHEL ROOTS"
+            href="/on-est-ensemble"
+            color="light"
+          />
+          <HeaderMenuLink
             text="MUSIC"
             href="/music"
             color="light"

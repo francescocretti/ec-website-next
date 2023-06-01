@@ -14,6 +14,10 @@ const DesktopHeader = () => {
           href="/"
         />
         <HeaderMenuLink
+          text="EC + SAHEL ROOTS"
+          href="/on-est-ensemble"
+        />
+        <HeaderMenuLink
           text="MUSIC"
           href="/music"
         />
@@ -36,7 +40,7 @@ const DesktopHeader = () => {
 
 const MobileHeader = ({ setSidebarOpen }) => {
   return (
-    <div className='md:hidden absolute top-8 right-8 z-[99]'>
+    <div className='md:hidden absolute top-8 right-8 z-[99] text-ec-grayred'>
       <HiMenuAlt1
         className='text-4xl'
         onClick={() => setSidebarOpen(true)}

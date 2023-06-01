@@ -8,7 +8,7 @@ import SocialLinks from '../components/SocialLinks';
 
 import Link from 'next/link';
 
-import dhimma from '../assets/dhimma.jpg';
+import sahelcircus from '../assets/sahelcircus.png';
 
 import NewVideo from '../components/NewVideo';
 
@@ -39,9 +39,9 @@ const Home = () => {
 
           <div className="mt-24 md:mt-16">
             <NewVideo
-              videoUrl="https://youtu.be/pvvxa3xfGGA"
-              image={dhimma}
-              claim="CLICK THIS COVER!"
+              href="/on-est-ensemble"
+              image={sahelcircus}
+              claim="CLICK THIS IMAGE!"
             />
           </div>
 

@@ -20,7 +20,7 @@ const NewVideo = ({ href, image, claim }) => {
 
       <div className='absolute -left-[270px] top-[190px]'>
         <span className='inline-block font-bold text-black bg-gray-300 text-xl -rotate-[23deg]'>
-          NEW PROJECT!
+          NEW SINGLE!
         </span>
       </div>
 

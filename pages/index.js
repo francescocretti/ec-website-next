@@ -38,7 +38,7 @@ const Home = () => {
 
         <div className="mt-24 md:mt-16">
           <NewVideo
-            href="https://open.spotify.com/album/6XIcgClUVBg6vBFHCwOI0k?si=29J3Ei1JSIO1waabuSbPnw"
+            href="https://open.spotify.com/artist/1U6ZJR2dru7HSglnG1MPn6?si=l0hExzZBSUuWF53iavH_Lg"
             image={kingIsComing}
             claim="CLICK THIS ARTWORK!"
           />

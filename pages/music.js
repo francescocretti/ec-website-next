@@ -13,7 +13,7 @@ const Music = () => {
     <Container
       bgImage={image}
       title="MUSIC"
-      subtitle={`It's basically <strong>funk</strong>, with a sprinkle of <strong>world music</strong>, <strong>afrobeat</strong> and <strong>psychedelia</strong> 🍄`}
+      subtitle={`It's basically <strong>funk</strong>, with a sprinkle of <strong>world music</strong>, <br> <strong>afrobeat</strong> and <strong>psychedelia</strong> 🍄`}
     >
 
       <div className='mt-16 flex flex-col xl:flex-row'>

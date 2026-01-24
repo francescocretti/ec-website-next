@@ -19,7 +19,7 @@ const Home = () => {
     <Container bgImage={image} >
       <div className='my-28 md:my-0 flex flex-col justify-center items-center w-full h-full'>
 
-        <Link href="https://youtu.be/giqxm9PBFK8">
+        <Link href="https://youtu.be/P510Nl_gXxA?si=iGeQW-BfrYa7xeuN">
           <a>
             <EcLogo
               className="cursor-pointer"
@@ -34,14 +34,6 @@ const Home = () => {
 
         <div className="mt-10">
           <SocialLinks />
-        </div>
-
-        <div className="mt-24 md:mt-16">
-          <NewVideo
-            href="https://open.spotify.com/artist/1U6ZJR2dru7HSglnG1MPn6?si=l0hExzZBSUuWF53iavH_Lg"
-            image={kingIsComing}
-            claim="CLICK THIS ARTWORK!"
-          />
         </div>
 
       </div>

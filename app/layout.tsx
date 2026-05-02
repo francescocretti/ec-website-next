@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -10,9 +12,12 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Electric Circus",
+  title: {
+    default: "Electric Circus",
+    template: "%s · Electric Circus",
+  },
   description:
-    "Electric Circus — funk, afrobeat, psychedelia. New single 'High Fever' out May 15, 2026.",
+    "Electric Circus — funk grooves, afrobeat, psychedelia. New single 'High Fever' out May 15, 2026 on Killer Groove Records.",
 };
 
 export default function RootLayout({
@@ -22,7 +27,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={openSans.variable}>
-      <body>{children}</body>
+      <body>
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

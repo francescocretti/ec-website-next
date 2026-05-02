@@ -55,7 +55,7 @@ export default function CountdownTimer() {
       ) : (
         <div
           aria-live="polite"
-          className="flex justify-center gap-6"
+          className="flex justify-center gap-3 sm:gap-6"
         >
           <Unit value={remaining ? pad(remaining.days) : "00"} label="Days" />
           <Sep />
@@ -90,7 +90,7 @@ export default function CountdownTimer() {
 function Unit({ value, label }: { value: string; label: string }) {
   return (
     <div className="flex flex-col items-center">
-      <span className="text-[42px] font-extrabold leading-none text-cream tracking-[0.04em] tabular-nums">
+      <span className="text-[28px] sm:text-[42px] font-extrabold leading-none text-cream tracking-[0.04em] tabular-nums">
         {value}
       </span>
       <span className="mt-0.5 text-[9px] uppercase tracking-[0.2em] opacity-40">
@@ -104,7 +104,7 @@ function Sep() {
   return (
     <span
       aria-hidden="true"
-      className="text-[38px] opacity-20 self-start pt-0.5"
+      className="text-[24px] sm:text-[38px] opacity-20 self-start pt-0.5"
     >
       :
     </span>

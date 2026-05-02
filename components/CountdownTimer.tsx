@@ -27,9 +27,7 @@ const pad = (n: number) => String(n).padStart(2, "0");
 
 export default function CountdownTimer() {
   const targetMs = releaseDate.getTime();
-  const [remaining, setRemaining] = useState<Remaining>(() =>
-    diffToParts(targetMs, Date.now()),
-  );
+  const [remaining, setRemaining] = useState<Remaining>(null);
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {

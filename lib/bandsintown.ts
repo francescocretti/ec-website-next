@@ -3,7 +3,7 @@ import "server-only";
 const APP_ID =
   process.env.BANDSINTOWN_APP_ID ?? "e950cda86ed67a126b7e6d5c1e15d8db";
 const ARTIST_NAME = "Electric Circus";
-const REVALIDATE_SECONDS = 3600;
+const REVALIDATE_SECONDS = 900;
 const PAST_EVENTS_LIMIT = 12;
 
 type BandsintownOffer = {

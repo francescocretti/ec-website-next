@@ -15,7 +15,7 @@ export const socials: Social[] = [
   {
     platform: "spotify",
     label: "Spotify",
-    url: "https://spoti.fi/2zwMTOP",
+    url: "https://open.spotify.com/artist/1U6ZJR2dru7HSglnG1MPn6?si=T6ZoSirNQUOSrkDUF8GB6w",
   },
   {
     platform: "bandcamp",

@@ -32,7 +32,7 @@ export const socials: Social[] = [
 export const externalLinks = {
   presave: "https://found.ee/highfever",
   label: "https://www.killergrooverecords.com",
-  pressKit: "/resources/ElectricCircus_Press_Kit.pdf",
+  pressKit: "/resources/KGRDIGI07_ElectricCircus_HighFever_promo_EN.pdf",
   techRiderSextet: "/resources/ElectricCircus_Sextet_Tech_Rider.pdf",
   techRiderQuintet: "/resources/ElectricCircus_Quintet_Tech_Rider.pdf",
 };

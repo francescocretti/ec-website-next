@@ -43,7 +43,9 @@ export default function ContactsPage() {
         </div>
 
         <div className="flex flex-col gap-2 py-9 border-b border-cream/10">
-          <span className={labelClass}>Booking &amp; Management</span>
+          <span className={labelClass}>
+            Booking &amp; Management — Sberdia Live
+          </span>
           <a
             href={`mailto:${contactEmails.booking}`}
             className="text-lg sm:text-[22px] font-light text-cream transition-opacity hover:opacity-70 tracking-[0.02em]"

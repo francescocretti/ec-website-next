@@ -58,7 +58,13 @@ export default function SocialIcons({
   gap = "gap-5",
 }: Props) {
   return (
-    <div className={`flex items-center ${gap} ${className}`}>
+    <div
+      className={`flex ${
+        variant === "labeled"
+          ? "flex-col items-start sm:flex-row sm:items-center"
+          : "items-center"
+      } ${gap} ${className}`}
+    >
       {socials.map(({ platform, label, url }) => {
         const Icon = iconMap[platform];
         if (variant === "labeled") {

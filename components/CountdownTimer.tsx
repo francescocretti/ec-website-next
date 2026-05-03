@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { externalLinks, releaseDate } from "@/data/socials";
+import { externalLinks, release } from "@/data/socials";
 
 type Remaining = {
   days: number;
@@ -26,18 +26,25 @@ function diffToParts(targetMs: number, nowMs: number): Remaining {
 const pad = (n: number) => String(n).padStart(2, "0");
 
 export default function CountdownTimer() {
-  const targetMs = releaseDate.getTime();
   const [remaining, setRemaining] = useState<Remaining>(null);
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
+    const targetMs = new Date(
+      release.year,
+      release.month - 1,
+      release.day,
+      0,
+      0,
+      0,
+    ).getTime();
     setHydrated(true);
     setRemaining(diffToParts(targetMs, Date.now()));
     const id = setInterval(() => {
       setRemaining(diffToParts(targetMs, Date.now()));
     }, 1000);
     return () => clearInterval(id);
-  }, [targetMs]);
+  }, []);
 
   const isReleased = hydrated && remaining === null;
 

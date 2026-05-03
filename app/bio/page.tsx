@@ -43,6 +43,9 @@ export default function BioPage() {
           className="block w-full h-auto"
           style={{ filter: "saturate(0.85) contrast(1.05)" }}
         />
+        <p className="mt-3 text-xs italic opacity-60">
+          Photo by Valentina Maistri
+        </p>
       </div>
 
       <div className="flex flex-col">

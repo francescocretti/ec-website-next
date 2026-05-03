@@ -44,3 +44,5 @@ export const contactEmails = {
 };
 
 export const release = { year: 2026, month: 5, day: 15 } as const;
+
+export const youtubeVideoId = "P510Nl_gXxA";

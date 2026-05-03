@@ -2,10 +2,13 @@ import Image from "next/image";
 import CountdownTimer from "@/components/CountdownTimer";
 import Ticker from "@/components/Ticker";
 import InfoStrip from "@/components/InfoStrip";
+import ReleaseMeta from "@/components/ReleaseMeta";
+import VinylCaption from "@/components/VinylCaption";
+import { ReleaseProvider } from "@/lib/release";
 
 export default function Home() {
   return (
-    <>
+    <ReleaseProvider>
       <section className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center text-center px-6 md:px-12 pt-24 md:pt-30 pb-16 md:pb-20">
         <div
           aria-hidden="true"
@@ -24,7 +27,7 @@ export default function Home() {
           }}
         />
 
-        <div className="relative z-10 flex flex-col items-center max-w-[860px] w-full">
+        <div className="relative z-10 flex flex-col items-center max-w-3xl w-full">
           <div className="mb-5 flex items-center justify-center gap-2.5 text-[11px] font-medium uppercase tracking-[0.24em] text-accent before:block before:w-7 before:h-px before:bg-accent after:block after:w-7 after:h-px after:bg-accent">
             New Single
           </div>
@@ -40,11 +43,9 @@ export default function Home() {
             />
           </h1>
 
-          <div className="mt-4 text-xs uppercase tracking-[0.12em] opacity-55">
-            Out May 15, 2026 · Killer Groove Records
-          </div>
+          <ReleaseMeta />
 
-          <div className="mt-9">
+          <div className="mt-9 w-full">
             <CountdownTimer />
           </div>
         </div>
@@ -60,14 +61,12 @@ export default function Home() {
               className="vinyl-img block w-full h-auto"
             />
           </div>
-          <p className="mt-5 text-base font-bold uppercase tracking-[0.2em] text-accent">
-            Limited edition 7&quot; vinyl available soon!
-          </p>
+          <VinylCaption />
         </div>
       </section>
 
       <Ticker />
       <InfoStrip />
-    </>
+    </ReleaseProvider>
   );
 }

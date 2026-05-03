@@ -1,19 +1,26 @@
+"use client";
+
+import { useIsReleased } from "@/lib/release";
+
 type Item = { text: string; accent?: boolean };
 
-const items: Item[] = [
-  { text: "Electric Circus" },
-  { text: "High Fever", accent: true },
-  { text: "Out May 15" },
-  { text: "Killer Groove Records" },
-  { text: "New Single" },
-  { text: "High Fever", accent: true },
-  { text: "Electric Circus" },
-  { text: "Out May 15" },
-  { text: "Killer Groove Records" },
-  { text: "New Single" },
-];
-
 export default function Ticker() {
+  const released = useIsReleased();
+  const dateText = released ? "Out Now" : "Out May 15";
+
+  const items: Item[] = [
+    { text: "Electric Circus" },
+    { text: "High Fever", accent: true },
+    { text: dateText },
+    { text: "Killer Groove Records" },
+    { text: "New Single" },
+    { text: "High Fever", accent: true },
+    { text: "Electric Circus" },
+    { text: dateText },
+    { text: "Killer Groove Records" },
+    { text: "New Single" },
+  ];
+
   return (
     <div
       aria-hidden="true"

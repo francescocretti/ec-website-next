@@ -1,62 +1,21 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { externalLinks, release } from "@/data/socials";
-
-type Remaining = {
-  days: number;
-  hours: number;
-  mins: number;
-  secs: number;
-} | null;
-
-function diffToParts(targetMs: number, nowMs: number): Remaining {
-  let diff = targetMs - nowMs;
-  if (diff <= 0) return null;
-  const days = Math.floor(diff / 86_400_000);
-  diff -= days * 86_400_000;
-  const hours = Math.floor(diff / 3_600_000);
-  diff -= hours * 3_600_000;
-  const mins = Math.floor(diff / 60_000);
-  diff -= mins * 60_000;
-  const secs = Math.floor(diff / 1_000);
-  return { days, hours, mins, secs };
-}
+import { externalLinks, youtubeVideoId } from "@/data/socials";
+import { useReleaseState } from "@/lib/release";
+import YouTubeFacade from "./YouTubeFacade";
 
 const pad = (n: number) => String(n).padStart(2, "0");
 
 export default function CountdownTimer() {
-  const [remaining, setRemaining] = useState<Remaining>(null);
-  const [hydrated, setHydrated] = useState(false);
-
-  useEffect(() => {
-    const targetMs = new Date(
-      release.year,
-      release.month - 1,
-      release.day,
-      0,
-      0,
-      0,
-    ).getTime();
-    setHydrated(true);
-    setRemaining(diffToParts(targetMs, Date.now()));
-    const id = setInterval(() => {
-      setRemaining(diffToParts(targetMs, Date.now()));
-    }, 1000);
-    return () => clearInterval(id);
-  }, []);
-
-  const isReleased = hydrated && remaining === null;
+  const { isReleased, remaining } = useReleaseState();
 
   return (
-    <div className="flex flex-col items-center gap-10">
+    <div className="flex flex-col items-center gap-10 w-full">
       {isReleased ? (
-        <div
-          aria-live="polite"
-          className="text-[28px] font-extrabold uppercase tracking-[0.08em] text-teal"
-        >
-          Out Now!
-        </div>
+        <YouTubeFacade
+          videoId={youtubeVideoId}
+          title="Electric Circus — High Fever"
+        />
       ) : (
         <div
           aria-live="polite"
@@ -79,7 +38,7 @@ export default function CountdownTimer() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2.5 bg-cream text-[#0a0a0a] px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] transition-colors hover:bg-accent hover:text-bg"
         >
-          {isReleased ? "Listen now" : "Pre-save now"}
+          {isReleased ? "Listen / Pre-order 45" : "Pre-save now"}
         </a>
         <a
           href="/shows"

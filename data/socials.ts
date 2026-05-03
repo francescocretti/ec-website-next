@@ -40,6 +40,7 @@ export const externalLinks = {
 export const contactEmails = {
   general: "electriccircus3@gmail.com",
   booking: "gianniurss@gmail.com",
+  label: "info@killergrooverecords.com",
 };
 
 export const release = { year: 2026, month: 5, day: 15 } as const;

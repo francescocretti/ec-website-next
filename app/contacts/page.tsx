@@ -52,6 +52,18 @@ export default function ContactsPage() {
           </a>
         </div>
 
+        <div className="flex flex-col gap-2 py-9 border-b border-cream/10">
+          <span className={labelClass}>
+            Press, sync &amp; licensing — Killer Groove Records
+          </span>
+          <a
+            href={`mailto:${contactEmails.label}`}
+            className="text-lg sm:text-[22px] font-light text-cream transition-opacity hover:opacity-70 tracking-[0.02em]"
+          >
+            {contactEmails.label}
+          </a>
+        </div>
+
         <div className="flex flex-col gap-4 py-9 border-b border-cream/10">
           <span className={labelClass}>Resources</span>
           <div className="flex gap-4 flex-wrap">

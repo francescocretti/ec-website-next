@@ -49,8 +49,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative z-10 mt-15 md:mt-[60px] w-full flex justify-center">
-          <div className="relative w-full max-w-[600px]">
+        <div className="relative z-10 mt-15 md:mt-15 w-full flex flex-col items-center">
+          <div className="relative w-full max-w-150">
             <Image
               src="/img/high-fever-mockup.png"
               alt="High Fever 7-inch vinyl"
@@ -60,6 +60,9 @@ export default function Home() {
               className="vinyl-img block w-full h-auto"
             />
           </div>
+          <p className="mt-5 text-base font-bold uppercase tracking-[0.2em] text-accent">
+            Limited edition 7&quot; vinyl available soon!
+          </p>
         </div>
       </section>
 

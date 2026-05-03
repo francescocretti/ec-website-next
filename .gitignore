@@ -39,3 +39,6 @@ yarn-error.log*
 .vercel
 
 .claude
+
+# local image originals (kept on disk as backup, served versions live alongside)
+public/img/*_hq.*

@@ -1,7 +1,6 @@
 import "server-only";
 
-const APP_ID =
-  process.env.BANDSINTOWN_APP_ID ?? "e950cda86ed67a126b7e6d5c1e15d8db";
+const APP_ID = process.env.BANDSINTOWN_APP_ID;
 const ARTIST_NAME = "Electric Circus";
 const REVALIDATE_SECONDS = 900;
 const PAST_EVENTS_LIMIT = 12;
@@ -50,6 +49,13 @@ export type ShowsResult = {
 };
 
 async function fetchEvents(date?: "past"): Promise<BandsintownEvent[]> {
+  if (!APP_ID) {
+    console.error(
+      "Bandsintown: BANDSINTOWN_APP_ID env var is not set — skipping fetch",
+    );
+    return [];
+  }
+
   const params = new URLSearchParams({ app_id: APP_ID });
   if (date) params.set("date", date);
   const url = `https://rest.bandsintown.com/artists/${encodeURIComponent(

@@ -44,7 +44,15 @@ export default function BioPage() {
           style={{ filter: "saturate(0.85) contrast(1.05)" }}
         />
         <p className="mt-3 text-xs italic opacity-60">
-          Photo by Valentina Maistri
+          Photo by{" "}
+          <a
+            href="https://www.instagram.com/wallacemoore/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:opacity-80"
+          >
+            wallacemoore
+          </a>
         </p>
       </div>
 

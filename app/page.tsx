@@ -4,6 +4,7 @@ import Ticker from "@/components/Ticker";
 import InfoStrip from "@/components/InfoStrip";
 import ReleaseMeta from "@/components/ReleaseMeta";
 import VinylCaption from "@/components/VinylCaption";
+import HeroArtwork from "@/components/HeroArtwork";
 import { ReleaseProvider } from "@/lib/release";
 
 export default function Home() {
@@ -52,14 +53,7 @@ export default function Home() {
 
         <div className="relative z-10 mt-15 md:mt-15 w-full flex flex-col items-center">
           <div className="relative w-full max-w-150">
-            <Image
-              src="/img/high-fever-mockup.png"
-              alt="High Fever 7-inch vinyl"
-              width={1200}
-              height={1200}
-              priority
-              className="vinyl-img block w-full h-auto"
-            />
+            <HeroArtwork />
           </div>
           <VinylCaption />
         </div>

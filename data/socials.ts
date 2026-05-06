@@ -1,4 +1,4 @@
-export type SocialPlatform = "instagram" | "spotify" | "bandcamp" | "youtube";
+export type SocialPlatform = "instagram" | "facebook" | "spotify" | "bandcamp" | "youtube";
 
 export type Social = {
   platform: SocialPlatform;
@@ -26,6 +26,11 @@ export const socials: Social[] = [
     platform: "youtube",
     label: "YouTube",
     url: "https://www.youtube.com/user/electriccircus3",
+  },
+  {
+    platform: "facebook",
+    label: "Facebook",
+    url: "https://www.facebook.com/electriccircus3/",
   },
 ];
 

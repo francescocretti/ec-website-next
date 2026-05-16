@@ -37,22 +37,23 @@ export default function ShowRow({ show }: { show: Show }) {
         </span>
       </div>
 
-      {show.soldOut ? (
-        <span className="hidden sm:inline-flex items-center text-[9px] font-semibold uppercase tracking-[0.22em] text-orange border border-orange/60 px-3 py-1.5">
-          Sold out
-        </span>
-      ) : show.url ? (
-        <a
-          href={show.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden sm:inline-flex items-center text-[9px] font-semibold uppercase tracking-[0.22em] text-cream border border-cream/40 px-3 py-1.5 transition-colors hover:border-cream"
-        >
-          More info
-        </a>
-      ) : (
-        <span className="hidden sm:block" aria-hidden="true" />
-      )}
+      <div className="col-start-2 row-start-2 mt-2 flex items-center gap-2 sm:col-start-3 sm:row-start-1 sm:mt-0">
+        {show.soldOut ? (
+          <span className="inline-flex items-center text-[9px] font-semibold uppercase tracking-[0.22em] text-orange border border-orange/60 px-3 py-1.5">
+            Sold out
+          </span>
+        ) : null}
+        {show.detailsUrl ? (
+          <a
+            href={show.detailsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-[9px] font-semibold uppercase tracking-[0.22em] text-cream border border-cream/40 px-3 py-1.5 transition-colors hover:border-cream"
+          >
+            Details
+          </a>
+        ) : null}
+      </div>
     </div>
   );
 }

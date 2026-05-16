@@ -5,12 +5,6 @@ const ARTIST_NAME = "Electric Circus";
 const REVALIDATE_SECONDS = 900;
 const PAST_EVENTS_LIMIT = 12;
 
-type BandsintownOffer = {
-  type: string;
-  url: string;
-  status: string;
-};
-
 type BandsintownVenue = {
   name: string;
   city: string;
@@ -28,7 +22,6 @@ type BandsintownEvent = {
   description: string;
   title: string;
   venue: BandsintownVenue;
-  offers: BandsintownOffer[];
   lineup: string[];
   sold_out: boolean;
 };
@@ -39,7 +32,7 @@ export type Show = {
   venue: string;
   city: string;
   event?: string;
-  url?: string;
+  detailsUrl?: string;
   soldOut?: boolean;
 };
 
@@ -80,13 +73,6 @@ async function fetchEvents(date?: "past"): Promise<BandsintownEvent[]> {
   }
 }
 
-function pickTicketUrl(event: BandsintownEvent): string | undefined {
-  const ticket = event.offers.find(
-    (o) => o.type.toLowerCase() === "tickets" && o.status !== "off-sale",
-  );
-  return ticket?.url ?? event.url ?? undefined;
-}
-
 function toShow(event: BandsintownEvent): Show {
   const dateOnly = event.datetime ? event.datetime.split("T")[0] : "";
   const description = event.description?.trim();
@@ -97,7 +83,7 @@ function toShow(event: BandsintownEvent): Show {
     venue: event.venue.name || "TBA",
     city: event.venue.city,
     event: description || title || undefined,
-    url: pickTicketUrl(event),
+    detailsUrl: event.url || undefined,
     soldOut: event.sold_out,
   };
 }

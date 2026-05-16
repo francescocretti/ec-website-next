@@ -37,7 +37,7 @@ export default function ShowRow({ show }: { show: Show }) {
         </span>
       </div>
 
-      <div className="hidden sm:flex items-center gap-2">
+      <div className="col-start-2 row-start-2 mt-2 flex items-center gap-2 sm:col-start-3 sm:row-start-1 sm:mt-0">
         {show.soldOut ? (
           <span className="inline-flex items-center text-[9px] font-semibold uppercase tracking-[0.22em] text-orange border border-orange/60 px-3 py-1.5">
             Sold out

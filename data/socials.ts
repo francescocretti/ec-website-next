@@ -36,6 +36,7 @@ export const socials: Social[] = [
 
 export const externalLinks = {
   presave: "https://found.ee/highfever",
+  merch: "https://electriccircus3.bandcamp.com/merch",
   label: "https://www.killergrooverecords.com",
   pressKit: "/resources/KGRDIGI07_ElectricCircus_HighFever_promo_EN.pdf",
   techRiderSextet: "/resources/ElectricCircus_Sextet_Tech_Rider.pdf",

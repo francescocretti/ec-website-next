@@ -5,10 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import SocialIcons from "./SocialIcons";
+import { externalLinks } from "@/data/socials";
 
-const links = [
+type NavLink = { href: string; label: string; external?: boolean };
+
+const links: NavLink[] = [
   { href: "/bio", label: "Bio" },
   { href: "/shows", label: "Shows" },
+  { href: externalLinks.merch, label: "Merch", external: true },
   { href: "/contacts", label: "Contacts" },
 ];
 
@@ -66,18 +70,25 @@ export default function Nav() {
         </Link>
 
         <div className="flex items-center gap-5 md:gap-9">
-          {links.map(({ href, label }) => {
-            const isActive = pathname === href;
-            return (
-              <Link
+          {links.map(({ href, label, external }) => {
+            const isActive = !external && pathname === href;
+            const className = `hidden md:inline-block text-xs font-medium uppercase tracking-[0.18em] text-cream transition-opacity ${
+              isActive
+                ? "opacity-100 border-b border-cream pb-[2px]"
+                : "opacity-70 hover:opacity-100"
+            }`;
+            return external ? (
+              <a
                 key={href}
                 href={href}
-                className={`hidden md:inline-block text-xs font-medium uppercase tracking-[0.18em] text-cream transition-opacity ${
-                  isActive
-                    ? "opacity-100 border-b border-cream pb-[2px]"
-                    : "opacity-70 hover:opacity-100"
-                }`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={className}
               >
+                {label}
+              </a>
+            ) : (
+              <Link key={href} href={href} className={className}>
                 {label}
               </Link>
             );
@@ -123,19 +134,32 @@ export default function Nav() {
         }`}
       >
         <ul className="flex flex-col items-center gap-8">
-          {links.map(({ href, label }) => {
-            const isActive = pathname === href;
+          {links.map(({ href, label, external }) => {
+            const isActive = !external && pathname === href;
+            const className = `text-2xl font-medium uppercase tracking-[0.2em] text-cream transition-opacity ${
+              isActive ? "opacity-100" : "opacity-70 hover:opacity-100"
+            }`;
             return (
               <li key={href}>
-                <Link
-                  href={href}
-                  className={`text-2xl font-medium uppercase tracking-[0.2em] text-cream transition-opacity ${
-                    isActive ? "opacity-100" : "opacity-70 hover:opacity-100"
-                  }`}
-                  tabIndex={menuOpen ? 0 : -1}
-                >
-                  {label}
-                </Link>
+                {external ? (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={className}
+                    tabIndex={menuOpen ? 0 : -1}
+                  >
+                    {label}
+                  </a>
+                ) : (
+                  <Link
+                    href={href}
+                    className={className}
+                    tabIndex={menuOpen ? 0 : -1}
+                  >
+                    {label}
+                  </Link>
+                )}
               </li>
             );
           })}

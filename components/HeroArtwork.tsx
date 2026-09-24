@@ -5,10 +5,10 @@ import { useIsReleased } from "@/lib/release";
 
 export default function HeroArtwork() {
   const released = useIsReleased();
-  const src = released
-    ? "/img/high-fever-mockup.png"
-    : "/img/high_fever_cover.jpg";
-  const alt = released ? "High Fever 7-inch vinyl" : "High Fever cover artwork";
+  const src = released ? "/img/high-fever-mockup.png" : "/img/ogres-cover.jpg";
+  const alt = released
+    ? "High Fever / Ogres 7-inch vinyl"
+    : "Ogres cover artwork";
 
   return (
     <Image

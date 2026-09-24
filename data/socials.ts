@@ -35,10 +35,10 @@ export const socials: Social[] = [
 ];
 
 export const externalLinks = {
-  presave: "https://found.ee/highfever",
+  presave: "https://found.ee/ECRites",
   merch: "https://electriccircus3.bandcamp.com/merch",
   label: "https://www.killergrooverecords.com",
-  pressKit: "/resources/KGRDIGI07_ElectricCircus_HighFever_promo_EN.pdf",
+  pressKit: "/resources/KGRDIGI08_ElectricCircus_Ogres_promo_EN.pdf",
   techRiderSextet: "/resources/ElectricCircus_Sextet_Tech_Rider.pdf",
   techRiderQuintet: "/resources/ElectricCircus_Quintet_Tech_Rider.pdf",
 };
@@ -49,6 +49,11 @@ export const contactEmails = {
   label: "info@killergrooverecords.com",
 };
 
-export const release = { year: 2026, month: 5, day: 15 } as const;
+export const currentRelease = {
+  single: "Ogres",
+  album: "Rites",
+} as const;
 
-export const youtubeVideoId = "uNS9vfXN380";
+export const release = { year: 2026, month: 9, day: 25 } as const;
+
+export const youtubeVideoId = "RqDT3_tY9pg";

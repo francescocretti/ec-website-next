@@ -6,6 +6,7 @@ import ReleaseMeta from "@/components/ReleaseMeta";
 import VinylCaption from "@/components/VinylCaption";
 import HeroArtwork from "@/components/HeroArtwork";
 import { ReleaseProvider } from "@/lib/release";
+import { currentRelease } from "@/data/socials";
 
 export default function Home() {
   return (
@@ -35,10 +36,10 @@ export default function Home() {
 
           <h1 className="w-full">
             <Image
-              src="/img/high-fever.png"
-              alt="High Fever"
-              width={960}
-              height={320}
+              src="/img/ogres.png"
+              alt={currentRelease.single}
+              width={2318}
+              height={631}
               priority
               className="block mx-auto w-full max-w-[480px] h-auto"
             />

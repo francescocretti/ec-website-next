@@ -1,4 +1,5 @@
-import { externalLinks } from "@/data/socials";
+import Image from "next/image";
+import { currentRelease, externalLinks } from "@/data/socials";
 
 export default function AlbumCallout() {
   return (
@@ -11,11 +12,18 @@ export default function AlbumCallout() {
         New Album
       </div>
       <div className="text-[28px] font-extrabold tracking-[0.04em] leading-tight">
-        Rites
+        {currentRelease.album}
       </div>
       <div className="text-[13px] opacity-55 tracking-[0.08em] mt-1">
         Out 2026 · Killer Groove Records
       </div>
+      <Image
+        src="/img/rites-cover.png"
+        alt="Rites album cover and vinyl"
+        width={1395}
+        height={915}
+        className="w-full max-w-[480px] h-auto mt-4"
+      />
       <p className="text-sm leading-[1.8] opacity-70 mt-2 max-w-[580px]">
         Mix &apos;70s jazz-funk and classic afrobeat with a modern groovy twist,
         add a touch of psychedelic flavor, and sip it through an exotic straw.
@@ -30,7 +38,7 @@ export default function AlbumCallout() {
         rel="noopener noreferrer"
         className="self-start inline-flex items-center gap-2.5 mt-7 px-7 py-3.5 bg-cream text-[#0a0a0a] text-[11px] font-semibold uppercase tracking-[0.2em] transition-colors hover:bg-accent hover:text-bg"
       >
-        Pre-save Single
+        Pre-order Rites Now
       </a>
     </div>
   );

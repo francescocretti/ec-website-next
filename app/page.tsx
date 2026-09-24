@@ -5,6 +5,7 @@ import InfoStrip from "@/components/InfoStrip";
 import ReleaseMeta from "@/components/ReleaseMeta";
 import VinylCaption from "@/components/VinylCaption";
 import HeroArtwork from "@/components/HeroArtwork";
+import AlbumCallout from "@/components/AlbumCallout";
 import { ReleaseProvider } from "@/lib/release";
 import { currentRelease } from "@/data/socials";
 
@@ -59,6 +60,10 @@ export default function Home() {
           <VinylCaption />
         </div>
       </section>
+
+      <div className="max-w-3xl mx-auto px-6 md:px-12 pb-16 md:pb-20">
+        <AlbumCallout />
+      </div>
 
       <Ticker />
       <InfoStrip />

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s · Electric Circus",
   },
   description:
-    "Electric Circus — funk grooves, afrobeat, psychedelia. New single 'High Fever' on Killer Groove Records.",
+    "Electric Circus — funk grooves, afrobeat, psychedelia. New single 'Ogres' out now — pre-order the album 'Rites' — on Killer Groove Records.",
   twitter: {
     card: "summary_large_image",
   },

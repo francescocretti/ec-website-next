@@ -1,6 +1,6 @@
 "use client";
 
-import { externalLinks, youtubeVideoId } from "@/data/socials";
+import { currentRelease, externalLinks, youtubeVideoId } from "@/data/socials";
 import { useReleaseState } from "@/lib/release";
 import YouTubeFacade from "./YouTubeFacade";
 
@@ -14,7 +14,7 @@ export default function CountdownTimer() {
       {isReleased ? (
         <YouTubeFacade
           videoId={youtubeVideoId}
-          title="Electric Circus — High Fever"
+          title={`Electric Circus — ${currentRelease.single}`}
         />
       ) : (
         <div
@@ -38,7 +38,7 @@ export default function CountdownTimer() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2.5 bg-cream text-[#0a0a0a] px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.2em] transition-colors hover:bg-accent hover:text-bg"
         >
-          {isReleased ? "Listen / Pre-order 45" : "Pre-save now"}
+          {isReleased ? "Listen / Buy 45" : "Pre-save now"}
         </a>
         <a
           href="/shows"

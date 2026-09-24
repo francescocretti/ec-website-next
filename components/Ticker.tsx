@@ -1,20 +1,21 @@
 "use client";
 
+import { currentRelease } from "@/data/socials";
 import { useIsReleased } from "@/lib/release";
 
 type Item = { text: string; accent?: boolean };
 
 export default function Ticker() {
   const released = useIsReleased();
-  const dateText = released ? "Out Now" : "Out May 15";
+  const dateText = released ? "Out Now" : "Out Sep 25";
 
   const items: Item[] = [
     { text: "Electric Circus" },
-    { text: "High Fever", accent: true },
+    { text: currentRelease.single, accent: true },
     { text: dateText },
     { text: "Killer Groove Records" },
     { text: "New Single" },
-    { text: "High Fever", accent: true },
+    { text: currentRelease.single, accent: true },
     { text: "Electric Circus" },
     { text: dateText },
     { text: "Killer Groove Records" },

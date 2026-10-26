@@ -40,7 +40,7 @@ export const featuredAlbum = {
   title: "Rites",
   kind: "album",
   date: { year: 2026, month: 11, day: 27 },
-  cover: "/img/rites-mockup.png",
+  cover: "/img/rites-cover.jpg",
   mockup: "/img/rites-mockup.png",
   href: externalLinks.presave,
 } as const satisfies Release & { mockup: string };

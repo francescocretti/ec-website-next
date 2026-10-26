@@ -31,19 +31,26 @@ export default function ReleaseTimeline() {
             <div className="md:mt-5 text-[11px] uppercase tracking-[0.2em] text-accent">
               {formatReleaseDate(featuredAlbum.date, false)}
             </div>
-            <div className="mt-3 aspect-square w-full border-2 border-dashed border-accent/70 flex flex-col items-center justify-center gap-2 text-center p-4">
-              <span className="text-2xl font-extrabold">
+            <Image
+              src={featuredAlbum.cover}
+              alt={`${featuredAlbum.title} album cover artwork`}
+              width={600}
+              height={600}
+              className="mt-3 aspect-square w-full object-cover shadow-xl ring-2 ring-accent ring-offset-4 ring-offset-bg"
+            />
+            <div className="mt-4 flex flex-wrap items-center gap-2">
+              <span className="text-lg font-extrabold">
                 {featuredAlbum.title}
               </span>
-              <span className="text-[10px] uppercase tracking-[0.2em] opacity-70">
-                The full album
+              <span className="text-[9px] uppercase tracking-[0.2em] border border-accent text-accent px-1.5 py-0.5 font-bold">
+                Album
               </span>
             </div>
             <a
               href={featuredAlbum.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 text-[11px] uppercase tracking-[0.18em] text-accent transition-opacity hover:opacity-80"
+              className="mt-1 text-[11px] uppercase tracking-[0.18em] text-accent transition-opacity hover:opacity-80"
             >
               Get it →
             </a>

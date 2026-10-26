@@ -7,13 +7,13 @@ Istruzioni operative per agenti AI (e umani) che lavorano su questo repository.
 Sito ufficiale della band **Electric Circus** ([electriccircus.it](https://www.electriccircus.it/)).
 È il sito vetrina permanente del progetto, statico-first: biografia, date live, contatti, social e presentazione delle uscite discografiche.
 
-Al momento la release in evidenza è il singolo **"Ogres"** (Killer Groove Records), lato B dello stesso 7" di "High Fever", con il pre-order dell'album **"Rites"** attivo in parallelo — countdown, artwork e callout in home ruotano attorno a queste due uscite. È però **contenuto di periodo, non lo scopo del sito**: in futuro arriveranno altri singoli e album che prenderanno quel posto. Quando tocchi la home o i componenti di release, tratta titolo di singolo/album come dato sostituibile (`currentRelease` in `data/socials.ts`, `lib/release.tsx`), non hardcodarlo ulteriormente nella struttura.
+Al momento la release in evidenza è l'album **"Rites"** (Killer Groove Records, uscita 27 novembre 2026): la home ha countdown e mockup dell'album, più una timeline con i singoli che lo hanno anticipato ("High Fever", "Ogres", "King of Beggars"). È però **contenuto di periodo, non lo scopo del sito**: in futuro arriveranno altri singoli e album che prenderanno quel posto. Quando tocchi la home o i componenti di release, tratta titoli, date e artwork come dati sostituibili (`featuredAlbum` e `singles` in `data/releases.ts`, letti da `lib/release.tsx` e dai componenti), non hardcodarli nella struttura.
 
 Pagine (App Router):
 
 | Route       | File                  | Contenuto                                          |
 | ----------- | --------------------- | -------------------------------------------------- |
-| `/`         | `app/page.tsx`        | Hero + countdown/artwork, ticker, video, callout album |
+| `/`         | `app/page.tsx`        | Hero album + countdown, timeline singoli, ticker     |
 | `/bio`      | `app/bio/page.tsx`    | Biografia e crediti fotografici                    |
 | `/shows`    | `app/shows/page.tsx`  | Date live (upcoming, fallback su past)             |
 | `/contacts` | `app/contacts/page.tsx` | Booking, label, social                           |

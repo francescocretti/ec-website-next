@@ -38,7 +38,7 @@ export const externalLinks = {
   presave: "https://found.ee/ECRites",
   merch: "https://electriccircus3.bandcamp.com/merch",
   label: "https://www.killergrooverecords.com",
-  pressKit: "/resources/KGRDIGI08_ElectricCircus_Ogres_promo_EN.pdf",
+  pressKit: "/resources/KGR03_ElectricCircus_Rites_promo_EN.pdf",
   techRiderSextet: "/resources/ElectricCircus_Sextet_Tech_Rider.pdf",
   techRiderQuintet: "/resources/ElectricCircus_Quintet_Tech_Rider.pdf",
 };
@@ -48,12 +48,3 @@ export const contactEmails = {
   booking: "gianniurss@gmail.com",
   label: "info@killergrooverecords.com",
 };
-
-export const currentRelease = {
-  single: "Ogres",
-  album: "Rites",
-} as const;
-
-export const release = { year: 2026, month: 9, day: 25 } as const;
-
-export const youtubeVideoId = "RqDT3_tY9pg";

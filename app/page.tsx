@@ -3,6 +3,7 @@ import CountdownTimer from "@/components/CountdownTimer";
 import Ticker from "@/components/Ticker";
 import InfoStrip from "@/components/InfoStrip";
 import ReleaseMeta from "@/components/ReleaseMeta";
+import ReleaseTimeline from "@/components/ReleaseTimeline";
 import { ReleaseProvider } from "@/lib/release";
 import { featuredAlbum } from "@/data/releases";
 
@@ -52,6 +53,7 @@ export default function Home() {
         </div>
       </section>
 
+      <ReleaseTimeline />
       <Ticker />
       <InfoStrip />
     </ReleaseProvider>

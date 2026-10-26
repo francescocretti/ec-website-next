@@ -47,6 +47,10 @@ export const featuredAlbum = {
 export const vinylSingle = {
   title: "High Fever / Ogres",
   format: '7" vinyl',
+  sides: [
+    { side: "A", title: "High Fever" },
+    { side: "B", title: "Ogres" },
+  ],
   details: "Limited edition · 500 copies only",
   image: "/img/high-fever-mockup.png",
   href: "https://electriccircus3.bandcamp.com/album/high-fever-ogres",

@@ -51,17 +51,7 @@ export default function ReleaseTimeline() {
           </li>
         </ol>
 
-        <p className="mt-10 text-[12px] uppercase tracking-[0.16em] opacity-60">
-          {vinylSingle.label} —{" "}
-          <a
-            href={vinylSingle.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline transition-colors hover:text-accent"
-          >
-            get it
-          </a>
-        </p>
+        <VinylPromo />
       </div>
     </section>
   );
@@ -104,6 +94,43 @@ function SingleStop({ single, latest }: { single: Release; latest: boolean }) {
         Listen →
       </a>
     </li>
+  );
+}
+
+function VinylPromo() {
+  return (
+    <div className="relative mt-16 md:mt-20 grid md:grid-cols-[1.2fr_1fr] gap-8 md:gap-12 items-center p-6 md:p-10 border border-cream/15 overflow-hidden">
+      <span
+        aria-hidden="true"
+        className="absolute left-0 top-0 h-full w-[3px] bg-accent"
+      />
+      <Image
+        src={vinylSingle.image}
+        alt={`${vinylSingle.title} ${vinylSingle.format}`}
+        width={1200}
+        height={748}
+        className="vinyl-img block w-full h-auto"
+      />
+      <div className="flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="text-[10px] font-semibold uppercase tracking-[0.28em] text-accent">
+          {vinylSingle.format}
+        </div>
+        <div className="mt-2 text-[28px] md:text-[34px] font-extrabold tracking-[0.04em] leading-tight">
+          {vinylSingle.title}
+        </div>
+        <div className="mt-2 text-[12px] uppercase tracking-[0.16em] opacity-60">
+          {vinylSingle.details}
+        </div>
+        <a
+          href={vinylSingle.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-7 inline-flex items-center gap-2.5 px-7 py-3.5 bg-cream text-[#0a0a0a] text-[11px] font-semibold uppercase tracking-[0.2em] transition-colors hover:bg-accent hover:text-bg"
+        >
+          Get the 7&quot;
+        </a>
+      </div>
+    </div>
   );
 }
 

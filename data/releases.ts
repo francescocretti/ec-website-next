@@ -48,7 +48,10 @@ export const featuredAlbum = {
 } as const satisfies Release;
 
 export const vinylSingle = {
-  label: 'High Fever / Ogres — limited 7" vinyl',
+  title: "High Fever / Ogres",
+  format: '7" vinyl',
+  details: "Limited edition · 500 copies only",
+  image: "/img/high-fever-mockup.png",
   href: externalLinks.presave,
 };
 

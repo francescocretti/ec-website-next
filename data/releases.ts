@@ -31,7 +31,7 @@ export const singles: Release[] = [
     title: "King of Beggars",
     kind: "single",
     date: { year: 2026, month: 10, day: 23 },
-    cover: null,
+    cover: "/img/king-of-beggars-cover.jpg",
     href: "https://open.spotify.com/album/7fv0k3fZlLnYtJ3y0Jsz7n",
   },
 ];

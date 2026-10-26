@@ -11,11 +11,8 @@ export default function ReleaseTimeline() {
   return (
     <section className="px-6 md:px-12 pb-16 md:pb-20">
       <div className="mx-auto max-w-6xl">
-        <div className="text-[11px] font-medium uppercase tracking-[0.24em] text-accent">
+        <h2 className="text-[11px] font-medium uppercase tracking-[0.24em] text-accent">
           The road to {featuredAlbum.title}
-        </div>
-        <h2 className="mt-2 text-2xl font-extrabold tracking-[0.04em]">
-          {singles.length} singles. One album.
         </h2>
 
         <ol className="relative mt-12 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">

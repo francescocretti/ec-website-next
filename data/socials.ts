@@ -38,7 +38,7 @@ export const externalLinks = {
   presave: "https://found.ee/ECRites",
   merch: "https://electriccircus3.bandcamp.com/merch",
   label: "https://www.killergrooverecords.com",
-  pressKit: "/resources/KGRDIGI08_ElectricCircus_Ogres_promo_EN.pdf",
+  pressKit: "/resources/KGR03_ElectricCircus_Rites_promo_EN.pdf",
   techRiderSextet: "/resources/ElectricCircus_Sextet_Tech_Rider.pdf",
   techRiderQuintet: "/resources/ElectricCircus_Quintet_Tech_Rider.pdf",
 };

@@ -1,4 +1,4 @@
-import { externalLinks, socials } from "@/data/socials";
+import { externalLinks } from "@/data/socials";
 
 export type ReleaseDate = { year: number; month: number; day: number };
 
@@ -12,30 +12,27 @@ export type Release = {
   note?: string;
 };
 
-const bandcamp =
-  socials.find((s) => s.platform === "bandcamp")?.url ?? externalLinks.presave;
-
 export const singles: Release[] = [
   {
     title: "High Fever",
     kind: "single",
     date: { year: 2026, month: 5, day: 15 },
     cover: "/img/high_fever_cover.jpg",
-    href: bandcamp,
+    href: "https://youtu.be/uNS9vfXN380",
   },
   {
     title: "Ogres",
     kind: "single",
     date: { year: 2026, month: 9, day: 25 },
     cover: "/img/ogres-cover.jpg",
-    href: bandcamp,
+    href: "https://youtu.be/RqDT3_tY9pg",
   },
   {
     title: "King of Beggars",
     kind: "single",
     date: { year: 2026, month: 10, day: 23 },
     cover: null,
-    href: bandcamp,
+    href: "https://open.spotify.com/album/7fv0k3fZlLnYtJ3y0Jsz7n",
   },
 ];
 

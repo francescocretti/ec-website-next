@@ -9,13 +9,12 @@ import {
 
 export default function ReleaseTimeline() {
   return (
-    <section className="px-6 md:px-12 pb-16 md:pb-20">
+    <section
+      aria-label={`Singles from ${featuredAlbum.title}`}
+      className="px-6 md:px-12 pb-16 md:pb-20"
+    >
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-[11px] font-medium uppercase tracking-[0.24em] text-accent">
-          The road to {featuredAlbum.title}
-        </h2>
-
-        <ol className="relative mt-12 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">
+        <ol className="relative grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">
           <span
             aria-hidden="true"
             className="hidden md:block absolute top-[7px] left-0 right-0 h-px bg-cream/25"

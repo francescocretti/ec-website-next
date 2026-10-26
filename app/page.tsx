@@ -30,7 +30,7 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto w-full max-w-6xl grid md:grid-cols-[1.25fr_1fr] gap-12 items-center">
           <Image
-            src={featuredAlbum.cover}
+            src={featuredAlbum.mockup}
             alt={`${featuredAlbum.title} album cover and vinyl`}
             width={1395}
             height={915}

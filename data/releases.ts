@@ -40,9 +40,10 @@ export const featuredAlbum = {
   title: "Rites",
   kind: "album",
   date: { year: 2026, month: 11, day: 27 },
-  cover: "/img/rites-cover.png",
+  cover: "/img/rites-mockup.png",
+  mockup: "/img/rites-mockup.png",
   href: externalLinks.presave,
-} as const satisfies Release;
+} as const satisfies Release & { mockup: string };
 
 export const vinylSingle = {
   title: "High Fever / Ogres",

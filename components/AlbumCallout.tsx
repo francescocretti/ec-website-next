@@ -19,7 +19,7 @@ export default function AlbumCallout() {
         Out {formatReleaseDate(featuredAlbum.date)} · Killer Groove Records
       </div>
       <Image
-        src={featuredAlbum.cover}
+        src={featuredAlbum.mockup}
         alt={`${featuredAlbum.title} album cover and vinyl`}
         width={1395}
         height={915}

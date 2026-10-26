@@ -49,7 +49,7 @@ export const vinylSingle = {
   format: '7" vinyl',
   details: "Limited edition · 500 copies only",
   image: "/img/high-fever-mockup.png",
-  href: externalLinks.presave,
+  href: "https://electriccircus3.bandcamp.com/album/high-fever-ogres",
 };
 
 const months = [

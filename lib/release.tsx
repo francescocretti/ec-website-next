@@ -7,7 +7,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { release } from "@/data/socials";
+import { featuredAlbum } from "@/data/releases";
 
 type Remaining = {
   days: number;
@@ -46,10 +46,11 @@ export function ReleaseProvider({ children }: { children: ReactNode }) {
   const [remaining, setRemaining] = useState<Remaining>(null);
 
   useEffect(() => {
+    const { year, month, day } = featuredAlbum.date;
     const targetMs = new Date(
-      release.year,
-      release.month - 1,
-      release.day,
+      year,
+      month - 1,
+      day,
       0,
       0,
       0,

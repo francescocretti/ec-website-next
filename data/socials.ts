@@ -48,12 +48,3 @@ export const contactEmails = {
   booking: "gianniurss@gmail.com",
   label: "info@killergrooverecords.com",
 };
-
-export const currentRelease = {
-  single: "Ogres",
-  album: "Rites",
-} as const;
-
-export const release = { year: 2026, month: 9, day: 25 } as const;
-
-export const youtubeVideoId = "RqDT3_tY9pg";

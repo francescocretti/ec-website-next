@@ -1,25 +1,28 @@
 "use client";
 
-import { currentRelease } from "@/data/socials";
+import { featuredAlbum, formatReleaseDate, singles } from "@/data/releases";
 import { useIsReleased } from "@/lib/release";
 
 type Item = { text: string; accent?: boolean };
 
 export default function Ticker() {
   const released = useIsReleased();
-  const dateText = released ? "Out Now" : "Out Sep 25";
+  const dateText = released
+    ? "Out Now"
+    : `Out ${formatReleaseDate(featuredAlbum.date, false)}`;
+  const latestSingle = singles[singles.length - 1].title;
 
   const items: Item[] = [
     { text: "Electric Circus" },
-    { text: currentRelease.single, accent: true },
+    { text: featuredAlbum.title, accent: true },
     { text: dateText },
     { text: "Killer Groove Records" },
-    { text: "New Single" },
-    { text: currentRelease.single, accent: true },
+    { text: "New Album" },
+    { text: featuredAlbum.title, accent: true },
     { text: "Electric Circus" },
     { text: dateText },
-    { text: "Killer Groove Records" },
     { text: "New Single" },
+    { text: latestSingle, accent: true },
   ];
 
   return (

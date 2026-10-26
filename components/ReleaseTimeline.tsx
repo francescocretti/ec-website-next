@@ -111,10 +111,10 @@ function VinylPromo() {
         className="vinyl-img block w-full h-auto"
       />
       <div className="flex flex-col items-center md:items-start text-center md:text-left">
-        <div className="text-[28px] md:text-[34px] font-extrabold tracking-[0.04em] leading-tight">
+        <div className="text-[22px] md:text-[26px] font-extrabold uppercase tracking-[0.06em] leading-tight text-accent">
           {vinylSingle.format} available now
         </div>
-        <div className="mt-3 text-[13px] uppercase tracking-[0.18em] text-accent">
+        <div className="mt-3 text-[15px] font-bold uppercase tracking-[0.16em] text-cream">
           {vinylSingle.sides.map((s, i) => (
             <span key={s.side}>
               {i > 0 && " / "}

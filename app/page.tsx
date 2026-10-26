@@ -10,7 +10,7 @@ import { featuredAlbum } from "@/data/releases";
 export default function Home() {
   return (
     <ReleaseProvider>
-      <section className="relative overflow-hidden min-h-screen flex items-center px-6 md:px-12 pt-24 md:pt-30 pb-16 md:pb-20">
+      <section className="relative overflow-hidden flex items-center px-6 md:px-12 pt-24 md:pt-30 pb-20 md:pb-28">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -top-[20%] -right-[10%] w-[60%] h-[90%]"

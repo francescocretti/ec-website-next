@@ -28,7 +28,7 @@ export default function AlbumMockupFlip() {
         type="button"
         onClick={() => setActive((i) => (i + 1) % faces.length)}
         aria-label={`Show ${faces[(active + 1) % faces.length].label.toLowerCase()} of the ${featuredAlbum.title} vinyl`}
-        className="vinyl-img relative block w-full aspect-[2000/1396] cursor-pointer"
+        className="vinyl-img relative block w-full aspect-[2000/1400] cursor-pointer"
       >
         {faces.map((face, i) => (
           <Image

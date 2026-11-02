@@ -17,7 +17,7 @@ export default function AlbumMockupFlip() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const id = setTimeout(
       () => setActive((i) => (i + 1) % faces.length),
-      5000,
+      4000,
     );
     return () => clearTimeout(id);
   }, [active]);

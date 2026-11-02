@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AlbumMockupFlip from "@/components/AlbumMockupFlip";
 import CountdownTimer from "@/components/CountdownTimer";
 import Ticker from "@/components/Ticker";
 import InfoStrip from "@/components/InfoStrip";
@@ -29,14 +29,7 @@ export default function Home() {
         />
 
         <div className="relative z-10 mx-auto w-full max-w-6xl grid md:grid-cols-[1.25fr_1fr] gap-12 items-center">
-          <Image
-            src={featuredAlbum.mockup}
-            alt={`${featuredAlbum.title} album cover and vinyl`}
-            width={1395}
-            height={915}
-            priority
-            className="vinyl-img block w-full h-auto"
-          />
+          <AlbumMockupFlip />
 
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="text-[11px] font-medium uppercase tracking-[0.24em] text-accent">

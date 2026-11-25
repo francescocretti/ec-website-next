@@ -17,7 +17,7 @@ export default function Ticker() {
     { text: featuredAlbum.title, accent: true },
     { text: dateText },
     { text: "Killer Groove Records" },
-    { text: "New Album" },
+    { text: released ? "Now Available" : "New Album" },
     { text: featuredAlbum.title, accent: true },
     { text: "Electric Circus" },
     { text: dateText },

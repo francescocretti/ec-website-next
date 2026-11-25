@@ -2,6 +2,7 @@ import AlbumMockupFlip from "@/components/AlbumMockupFlip";
 import CountdownTimer from "@/components/CountdownTimer";
 import Ticker from "@/components/Ticker";
 import InfoStrip from "@/components/InfoStrip";
+import ReleaseLabel from "@/components/ReleaseLabel";
 import ReleaseMeta from "@/components/ReleaseMeta";
 import ReleaseTimeline from "@/components/ReleaseTimeline";
 import { ReleaseProvider } from "@/lib/release";
@@ -32,9 +33,7 @@ export default function Home() {
           <AlbumMockupFlip />
 
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="text-[11px] font-medium uppercase tracking-[0.24em] text-accent">
-              New Album
-            </div>
+            <ReleaseLabel />
             <h1 className="mt-3 text-5xl md:text-6xl font-extrabold tracking-[0.04em]">
               {featuredAlbum.title}
             </h1>
